@@ -22,11 +22,17 @@
       <!--Body content-->
 
       <ul class="stars">
-        <li ng-repeat="star in $ctrl.stars | filter:$ctrl.query | orderBy:$ctrl.orderProp">
-          <span>{{star.ProperName}}</span>
+        <li ng-repeat="star in $ctrl.stars | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail">
+          <a href="#/stars/{{star.id}}" class="thumb">
+            <img ng-src="{{star.imageUrl}}" alt="{{star.name}}"></img>
+          </a>
+          <!-- <a href="#/stars/{{star.id}}">{{star.name}}</a> -->
+          <p>{{star.ProperName}}</p>
           <p>{{star.Distance}}</p>
         </li>
       </ul>
+
+      <pre>{{ $ctrl.stars | filter:$ctrl.query | orderBy:$ctrl.orderProp | json }}</pre>
 
     </div>
   </div>
