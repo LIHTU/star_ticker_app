@@ -2,11 +2,11 @@ body {
   padding-top: 20px;
 }
 
-.phones {
+.stars {
   list-style: none;
 }
 
-.phones li {
+.stars li {
   clear: both;
   height: 115px;
   padding-top: 15px;
@@ -15,7 +15,12 @@ body {
 .thumb {
   float: left;
   height: 100px;
-  margin: -0.5em 1em 1.5em 0;
+  /*margin: 0.2em 1em 0 0.5em;*/
+  margin: -0.5em 1em 1.5em 0.5em;
   padding-bottom: 1em;
   width: 100px;
 }
+
+/*.star-row {
+  height: 115px;
+}*/

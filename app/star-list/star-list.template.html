@@ -5,7 +5,7 @@
 
       <p>
         Search:
-        <input ng-model="$ctrl.query" />
+        <input ng-model="$ctrl.query"/>
       </p>
 
       <p>
@@ -14,6 +14,7 @@
           <option value="ProperName">Alphabetical</option>
           <option value="Distance">Closest</option>
           <option value="-Distance">Furthest</option>
+          <option value="Mag">Brightest</option>
         </select>
       </p>
 
@@ -22,17 +23,26 @@
       <!--Body content-->
 
       <ul class="stars">
-        <li ng-repeat="star in $ctrl.stars | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail">
+        <li ng-repeat="star in $ctrl.stars | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail star-row">
           <a href="#/stars/{{star.id}}" class="thumb">
-            <img ng-src="{{star.imageUrl}}" alt="{{star.name}}"></img>
+            <img ng-src="{{star.imgUrl}}" alt="{{star.name}}" />
           </a>
           <!-- <a href="#/stars/{{star.id}}">{{star.name}}</a> -->
           <p>{{star.ProperName}}</p>
-          <p>{{star.Distance}}</p>
+          <p>Apparent Magnitude: {{ star.Mag }}</p>
+          <p>
+            <span ng-show="star.lyUnit">Distance : {{ star.Distance_ly }}
+              <a ng-click="toggleDistanceUnit()">light years</a>
+            </span>
+            <span ng-show="!star.lyUnit">Distance: {{ star.Distance }}
+              <a ng-click="toggleDistanceUnit()">parsecs</a>
+            </span>
+          </p>
         </li>
       </ul>
 
-      <pre>{{ $ctrl.stars | filter:$ctrl.query | orderBy:$ctrl.orderProp | json }}</pre>
+      <!-- Fun line that displays json with the pre tag, which means preformatted.  -->
+      <!-- <pre>{{ $ctrl.stars | filter:$ctrl.query | orderBy:$ctrl.orderProp | json }}</pre> -->
 
     </div>
   </div>

@@ -31,7 +31,7 @@
     "AbsMag": 0.581769913,
     "Spectrum": "A0Vvar",
     "ColorIndex": -0.001,
-    "imgUrl": "vega.0.jpg"
+    "imgUrl": "img/stars/vega.0.jpg"
   },
   {
     "StarID": 55587,
@@ -48,7 +48,7 @@
     "AbsMag": 0.873751063,
     "Spectrum": "K2III",
     "ColorIndex": 1.167,
-    "imgUrl": "unukalhai.0.jpg"
+    "imgUrl": "img/stars/unukalhai.0.jpg"
   },
   {
     "StarID": 70401,
@@ -65,7 +65,7 @@
     "AbsMag": -3.029833712,
     "Spectrum": "K3II",
     "ColorIndex": 1.507,
-    "imgUrl": "tarazed.0.jpg"
+    "imgUrl": "img/stars/tarazed.0.jpg"
   },
   {
     "StarID": 47773,
@@ -82,7 +82,7 @@
     "AbsMag": -3.545898098,
     "Spectrum": "B1V",
     "ColorIndex": -0.235,
-    "imgUrl": "spica.0.jpg"
+    "imgUrl": "img/stars/spica.0.jpg"
   },
   {
     "StarID": 23440,
@@ -99,7 +99,7 @@
     "AbsMag": 1.454398907,
     "Spectrum": "A0m...",
     "ColorIndex": 0.009,
-    "imgUrl": "sirius.0.jpg"
+    "imgUrl": "img/stars/sirius.0.jpg"
   },
   {
     "StarID": 2243,
@@ -116,7 +116,7 @@
     "AbsMag": -1.987880134,
     "Spectrum": "K0II-IIIvar",
     "ColorIndex": 1.17,
-    "imgUrl": "shedir.0.jpg"
+    "imgUrl": "img/stars/shedir.0.jpg"
   },
   {
     "StarID": 61845,
@@ -133,7 +133,7 @@
     "AbsMag": -5.047410097,
     "Spectrum": "B1.5IV+...",
     "ColorIndex": -0.231,
-    "imgUrl": "shaula.0.jpg"
+    "imgUrl": "img/stars/shaula.0.jpg"
   },
   {
     "StarID": 82663,
@@ -150,7 +150,7 @@
     "AbsMag": -1.489756603,
     "Spectrum": "M2II-IIIvar",
     "ColorIndex": 1.655,
-    "imgUrl": "shaula.0.jpg"
+    "imgUrl": "img/stars/scheat.0.jpg"
   },
   {
     "StarID": 19506,
@@ -167,6 +167,6 @@
     "AbsMag": -4.654307826,
     "Spectrum": "B0.5Iavar",
     "ColorIndex": -0.168,
-    "imgUrl": "saiph.0.jpg"
+    "imgUrl": "img/stars/saiph.0.jpg"
   }
 ]
