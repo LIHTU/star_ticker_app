@@ -7,7 +7,7 @@ angular.
 module('starList').
 component('starList', {
     templateUrl: 'star-list/star-list.template.html',
-    controller: function StarListController($scope, $http) {
+    controller: ['$http',function StarListController($scope, $http) {
         // note: built-in angular services are prefixed with '$'; denotes a namespace.
         var self = this;
         self.orderProp = 'Distance';
@@ -29,5 +29,5 @@ component('starList', {
             star.lyUnit = star.lyUnit == true ? false : true;
           })
         };
-    }
-});
+    }]
+  });
