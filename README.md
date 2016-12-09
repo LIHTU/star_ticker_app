@@ -7,6 +7,8 @@ This app allows the user to discover new stars and track their personal sighting
 
 ### Invitation
 I usually work alone would happily welcome inspired collaborators.  Please contact me if you want to collaborate and fork it and go it alone to your heart's content!
+#### Roles Needed:
+- backend
 
 ## To Do
 Layout Tasks:
