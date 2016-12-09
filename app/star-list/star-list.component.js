@@ -6,7 +6,7 @@ angular.
 module('starList').
 component('starList', {
     templateUrl: 'star-list/star-list.template.html',
-    controller: ['$http', '$scope',  function StarListController( $http, $scope) {
+    controller: ['$http', '$scope',  function StarListController($http, $scope) {
         // note: built-in angular services are prefixed with '$'; denotes a namespace.
         var self = this;
         self.orderProp = 'Distance';
@@ -26,7 +26,7 @@ component('starList', {
 
         $scope.toggleDistanceUnit = function() {
           self.stars.forEach(function(star){
-            star.lyUnit = star.lyUnit == true ? false : true;
+            star.lyUnit = !star.lyUnit;
           })
         };
     }]

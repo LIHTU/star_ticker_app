@@ -27,11 +27,10 @@
           <a href="#/stars/{{star.id}}" class="thumb">
             <img ng-src="{{star.imgUrl}}" alt="{{star.name}}" />
           </a>
-          <!-- <a href="#/stars/{{star.id}}">{{star.name}}</a> -->
           <p>{{star.ProperName}}</p>
           <p>Apparent Magnitude: {{ star.Mag }}</p>
           <p>
-            <span ng-show="star.lyUnit">Distance : {{ star.Distance_ly }}
+            <span ng-show="star.lyUnit">Distance: {{ star.Distance_ly }}
               <a ng-click="toggleDistanceUnit()">light years</a>
             </span>
             <span ng-show="!star.lyUnit">Distance: {{ star.Distance }}
