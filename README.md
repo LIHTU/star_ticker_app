@@ -21,4 +21,4 @@ Features:
 Styles:
 - add night view
   - turns everything black and red.
-  - uses photos that have a slight red filter added to them.
+  - uses photos that have a slight red filter added to them. (accomplish with CSS; not by adding alterate photos.)
