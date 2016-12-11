@@ -8,6 +8,8 @@ component('starList', {
     templateUrl: 'star-list/star-list.template.html',
     controller: ['$http', '$scope',  function StarListController($http, $scope) {
         // note: built-in angular services are prefixed with '$'; denotes a namespace.
+
+        $scope.errors = [];
         var self = this;
         self.orderProp = 'Distance';
 
@@ -15,12 +17,15 @@ component('starList', {
           // success callback
           function(response) {
             starData = response.data;
-            self.stars = appendLightYears(starData); // appendLightYears in helper.js
-            self.stars = truncateDecimals(starData);
-
-            self.stars.forEach(function(star) {
+            var starsLy = appendLightYears(starData); // appendLightYears in helper.js
+            starsLy.forEach(function(star) {
                 star.lyUnit = true;
             });
+            self.stars = starsLy;
+          },
+          // failure callback
+          function(response) {
+            $scope.errors.push(response.data);
           }
         );
 

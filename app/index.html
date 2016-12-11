@@ -5,19 +5,20 @@
     <title>Star App</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
     <script src="star-list/star-list.module.js"></script>
     <script src="star-list/star-list.component.js"></script>
     <script src="star-list/star-list.helper.js"></script>
+    <script src="star-detail/star-detail.helper.js"></script>
+    <script src="star-detail/star-detail.module.js"></script>
+    <script src="star-detail/star-detail.component.js"></script>
   </head>
   <body>
-
-    <!-- Use a custom component to render a list of stars -->
-    <star-list></star-list>
-    <!-- refers to name of directory of module -->
-    <!-- directory names and file names are in kabob case -->
-    <!-- js modules and compenents are in camel case -->
+    <div ng-view></div>
 
   </body>
 </html>

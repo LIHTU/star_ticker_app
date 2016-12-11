@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="star-detail/star-detail.style.css"/>
+
+
+
+<div class="container">
+  <a href="#!/stars">
+    <button class="btn btn-sm btn-default">
+      <i class="fa fa-arrow-circle-left "></i>
+      <span>All Stars</span>
+    </button>
+  </a>
+
+  <h1>{{ $ctrl.star.ProperName}}</h1>
+  <div class="row">
+    <div class ="col-md-4">
+      <img ng-src="{{$ctrl.star.imgUrl}}" alt="{{$ctrl.star.name}}" />
+    </div>
+    <div class="col-md-8">
+      <div class="info-panel">
+        <p>Apparent Magnitude: {{ $ctrl.star.Mag }}</p>
+        <p>
+          <span ng-show="$ctrl.star.lyUnit">Distance: {{ $ctrl.star.Distance_ly }}
+            <a ng-click="toggleDistanceUnit()">light years</a>
+          </span>
+          <span ng-show="!$ctrl.star.lyUnit">Distance: {{ $ctrl.star.Distance }}
+            <a ng-click="toggleDistanceUnit()">parsecs</a>
+          </span>
+        </p>
+      </div>
+      <div class="data-box">
+        <button class="btn btn-sm btn-default" ng-click="toggleRawData()">
+          <i class="fa fa-eye" ng-show="!rawDataShow"></i>
+          <i class="fa fa-eye-slash" ng-show="rawDataShow"></i>
+          Raw Data
+        </button>
+        <pre class="data-pre" ng-show="rawDataShow">{{ $ctrl.star | json }}</pre>
+      </div>
+    </div>
+  </div>
+</div>

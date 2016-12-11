@@ -1,6 +1,6 @@
 [
   {
-    "StarID": 46533,
+    "id": 46533,
     "Hip": 63608,
     "HD": 113226,
     "HR": 4932,
@@ -17,7 +17,7 @@
     "imgUrl": "img/stars/vindemiatrix.0.jpg"
   },
   {
-    "StarID": 65795,
+    "id": 65795,
     "Hip": 91262,
     "HD": 172167,
     "HR": 7001,
@@ -34,7 +34,7 @@
     "imgUrl": "img/stars/vega.0.jpg"
   },
   {
-    "StarID": 55587,
+    "id": 55587,
     "Hip": 77070,
     "HD": 140573,
     "HR": 5854,
@@ -51,7 +51,7 @@
     "imgUrl": "img/stars/unukalhai.0.jpg"
   },
   {
-    "StarID": 70401,
+    "id": 70401,
     "Hip": 97278,
     "HD": 186791,
     "HR": 7525,
@@ -68,7 +68,7 @@
     "imgUrl": "img/stars/tarazed.0.jpg"
   },
   {
-    "StarID": 47773,
+    "id": 47773,
     "Hip": 65474,
     "HD": 116658,
     "HR": 5056,
@@ -85,7 +85,7 @@
     "imgUrl": "img/stars/spica.0.jpg"
   },
   {
-    "StarID": 23440,
+    "id": 23440,
     "Hip": 32349,
     "HD": 48915,
     "HR": 2491,
@@ -102,7 +102,7 @@
     "imgUrl": "img/stars/sirius.0.jpg"
   },
   {
-    "StarID": 2243,
+    "id": 2243,
     "Hip": 3179,
     "HD": 3712,
     "HR": 168,
@@ -119,7 +119,7 @@
     "imgUrl": "img/stars/shedir.0.jpg"
   },
   {
-    "StarID": 61845,
+    "id": 61845,
     "Hip": 85927,
     "HD": 158926,
     "HR": 6527,
@@ -136,7 +136,7 @@
     "imgUrl": "img/stars/shaula.0.jpg"
   },
   {
-    "StarID": 82663,
+    "id": 82663,
     "Hip": 113881,
     "HD": 217906,
     "HR": 8775,
@@ -153,7 +153,7 @@
     "imgUrl": "img/stars/scheat.0.jpg"
   },
   {
-    "StarID": 19506,
+    "id": 19506,
     "Hip": 27366,
     "HD": 38771,
     "HR": 2004,

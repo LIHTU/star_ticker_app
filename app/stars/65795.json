@@ -1,0 +1,17 @@
+{
+  "id": 65795,
+  "Hip": 91262,
+  "HD": 172167,
+  "HR": 7001,
+  "Gliese": "Gl 721",
+  "BayerFlamsteed": "3Alp Lyr",
+  "ProperName": "Vega",
+  "RA": 18.61560722,
+  "Dec": 38.78299311,
+  "Distance": 7.756146746,
+  "Mag": 0.03,
+  "AbsMag": 0.581769913,
+  "Spectrum": "A0Vvar",
+  "ColorIndex": -0.001,
+  "imgUrl": "img/stars/vega.0.jpg"
+}
