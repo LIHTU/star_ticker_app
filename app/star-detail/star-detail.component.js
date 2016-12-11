@@ -13,9 +13,12 @@ angular.
         $scope.rawDataShow = false;
 
         $http.get('stars/' + $routeParams.starId + '.json').then(function(response) {
-          starInfo = response.data;
-          var starInfoLy = appendLightYears(starInfo); // appendLightYears in helper.js
-          self.star = truncateDecimals(starInfoLy);
+          self.star = response.data;
+          
+          // is this silly?
+          self.star = appendLyDetail(self.star);
+          self.star = truncateDecimalsDetail(self.star);
+
           self.star.lyUnit = true;
         });
 

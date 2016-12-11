@@ -1,6 +1,5 @@
 "use strict";
 
-var starData;
 // Register `starList` component, along with its associated controller and template
 angular.
 module('starList').
@@ -11,23 +10,23 @@ component('starList', {
 
         $scope.errors = [];
         var self = this;
+        var starData;
         self.orderProp = 'Distance';
 
         $http.get('stars/stars.json').then(
           // success callback
           function(response) {
-            starData = response.data;
-            var starsLy = appendLightYears(starData); // appendLightYears in helper.js
-            starsLy.forEach(function(star) {
-                star.lyUnit = true;
-            });
-            self.stars = starsLy;
+            self.starsRaw = response.data;
+            self.stars = truncateDecimals(self.starsRaw);
+            self.stars = appendLyList(self.stars);
           },
           // failure callback
           function(response) {
             $scope.errors.push(response.data);
           }
         );
+
+
 
         $scope.toggleDistanceUnit = function() {
           self.stars.forEach(function(star){

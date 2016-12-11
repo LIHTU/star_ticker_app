@@ -1,8 +1,8 @@
 // function to add light years to star data b/c it's more commonplace than parsecs.
-function appendLightYears(allStars) {
+function appendLyList(allStars) {
   allStars.forEach(function(star) {
-    debugger;
     star.Distance_ly = Math.floor((star.Distance + 0.005) * 3.26156 *100) / 100;
+    console.log(star.Distance.ly);
   });
   return allStars;
 }
