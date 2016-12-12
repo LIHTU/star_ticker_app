@@ -1,0 +1,47 @@
+.stars {
+  list-style: none;
+}
+
+.stars li {
+  clear: both;
+  height: 80px;
+  padding-top: 10px;
+}
+
+.thumb-img {
+  float: left;
+  height: 60px;
+  /*margin: 0.2em 1em 0 0.5em;*/
+  margin: -0.5em 1em 1.5em 0.5em;
+  padding-bottom: 1em;
+  width: 60px;
+  padding-top:5px;
+}
+
+.thumb-far {
+  float: left;
+  height: 60px;
+  /*margin: 0.2em 1em 0 0.5em;*/
+  margin: -0.5em 1em 1.5em 0.5em;
+  padding-bottom: 1em;
+  width: 30px;
+  padding-top:5px;
+}
+
+.thumb {
+  float: left;
+  /*margin: 0.2em 1em 0 0.5em;*/
+  margin: 0;
+  padding-bottom: 1em;
+  padding-top:5px;
+}
+
+p.data-line {
+  margin: 0;
+}
+
+.check-box {
+  font-size: 2.5em;
+  padding-bottom: 1px;
+  /*line-height: 2em;*/
+}

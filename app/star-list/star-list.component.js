@@ -19,6 +19,7 @@ component('starList', {
             self.starsRaw = response.data;
             self.stars = truncateDecimals(self.starsRaw);
             self.stars = appendLyList(self.stars);
+            self.stars = checkDone(self.stars);
           },
           // failure callback
           function(response) {
@@ -26,7 +27,9 @@ component('starList', {
           }
         );
 
-
+        $scope.toggleDone = function() {
+          star.Done = !star.Done;
+        }
 
         $scope.toggleDistanceUnit = function() {
           self.stars.forEach(function(star){

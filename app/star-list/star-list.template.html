@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="star-list/star-list.style.css"/>
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-2">
@@ -24,12 +26,14 @@
 
       <ul class="stars">
         <li ng-repeat="star in $ctrl.stars | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail star-row">
-          <a href="#!/stars/{{star.id}}" class="thumb">
+          <p ng-click="toggleDone()" class="thumb check-box">{{ star.Done | checkmark }}</p>
+          <a href="#!/stars/{{star.id}}" class="thumb-img">
             <img ng-src="{{star.imgUrl}}" alt="{{star.name}}" />
           </a>
-          <p>{{star.ProperName}}</p>
-          <p>Apparent Magnitude: {{ star.Mag }}</p>
-          <p>
+          <p class="thumb-far">{{ star.Distance | far }}</p>
+          <p class="data-line">{{star.ProperName}}</p>
+          <p class="data-line">Apparent Magnitude: {{ star.Mag }}</p>
+          <p class="data-line">
             <span ng-show="star.lyUnit">Distance: {{ star.Distance_ly }}
               <a ng-click="toggleDistanceUnit()">light years</a>
             </span>
