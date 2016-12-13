@@ -41,7 +41,17 @@ p.data-line {
 }
 
 .check-box {
-  font-size: 2.5em;
-  padding-bottom: 1px;
+  width: 2em;
+  font-size: 1em;
+  padding: 18px 0 0 5px;
   /*line-height: 2em;*/
+}
+
+.toggle-link {
+  color: #101874;
+}
+
+.toggle-link:hover {
+  color: #000864;
+  text-decoration: none;
 }

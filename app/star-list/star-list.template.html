@@ -26,19 +26,23 @@
 
       <ul class="stars">
         <li ng-repeat="star in $ctrl.stars | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail star-row">
-          <p ng-click="toggleDone()" class="thumb check-box">{{ star.Done | checkmark }}</p>
+          <div ng-click="toggleDone(star)" class="thumb check-box">
+            <i ng-show="!star.Done" class="fa fa-square-o"></i>
+            <i ng-show="star.Done" class="fa fa-check-square-o"></i>
+          </div>
           <a href="#!/stars/{{star.id}}" class="thumb-img">
             <img ng-src="{{star.imgUrl}}" alt="{{star.name}}" />
           </a>
-          <p class="thumb-far">{{ star.Distance | far }}</p>
-          <p class="data-line">{{star.ProperName}}</p>
+
+            <p class="data-line"><a href="#!/stars/{{star.id}}">{{ star.ProperName }}</a></p>
+
           <p class="data-line">Apparent Magnitude: {{ star.Mag }}</p>
           <p class="data-line">
             <span ng-show="star.lyUnit">Distance: {{ star.Distance_ly }}
-              <a ng-click="toggleDistanceUnit()">light years</a>
+              <a ng-click="toggleDistanceUnit()" class="toggle-link">light years</a>
             </span>
             <span ng-show="!star.lyUnit">Distance: {{ star.Distance }}
-              <a ng-click="toggleDistanceUnit()">parsecs</a>
+              <a ng-click="toggleDistanceUnit()" class="toggle-link">parsecs</a>
             </span>
           </p>
         </li>

@@ -27,8 +27,8 @@ component('starList', {
           }
         );
 
-        $scope.toggleDone = function() {
-          star.Done = !star.Done;
+        $scope.toggleDone = function(thisStar) {
+          thisStar.Done = !thisStar.Done;
         }
 
         $scope.toggleDistanceUnit = function() {
