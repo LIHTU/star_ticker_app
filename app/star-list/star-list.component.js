@@ -12,8 +12,9 @@ component('starList', {
         var self = this;
         var starData;
         self.orderProp = 'Distance';
+        $scope.displayingTenStars = true;
 
-        $http.get('stars/stars.json').then(
+        $http.get('stars/tenStars.json').then(
           // success callback
           function(response) {
             self.starsRaw = response.data;
@@ -26,6 +27,24 @@ component('starList', {
             $scope.errors.push(response.data);
           }
         );
+
+        $scope.showTNG = function() {
+            $scope.displayingTenStars = false;
+            $scope.displayingTngStars = true;
+            $http.get('stars/tngStars.json').then(
+              // success callback
+              function(response) {
+                self.starsRaw = response.data;
+                self.stars = truncateDecimals(self.starsRaw);
+                self.stars = appendLyList(self.stars);
+                self.stars = checkDone(self.stars);
+              },
+              // failure callback
+              function(response) {
+                $scope.errors.push(response.data);
+              }
+            );
+        }
 
         $scope.toggleDone = function(thisStar) {
           thisStar.Done = !thisStar.Done;
