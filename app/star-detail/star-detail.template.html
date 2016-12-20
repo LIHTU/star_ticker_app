@@ -27,6 +27,7 @@
             <a ng-click="toggleDistanceUnit()">parsecs</a>
           </span>
         </p>
+        <p ng-show="displayingTngStars">Episodes: {{ $ctrl.star.Episode(s) }}</p>
       </div>
       <div class="data-box">
         <button class="btn btn-sm btn-default" ng-click="toggleRawData()">

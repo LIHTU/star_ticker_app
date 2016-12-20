@@ -1,6 +1,6 @@
 [
  {
-   "StarID": 15108,
+   "id": 15108,
    "Hip": 21421,
    "HD": 29139,
    "HR": 1457,
@@ -14,10 +14,11 @@
    "Mag": 0.87,
    "AbsMag": -0.631244842,
    "Spectrum": "K5III       ",
-   "ColorIndex": 1.538
+   "ColorIndex": 1.538,
+   "imgUrl": "img/stars/Aldebaran.jpg"
  },
  {
-   "StarID": 58094,
+   "id": 58094,
    "Hip": 80763,
    "HD": 148478,
    "HR": 6134,
@@ -31,10 +32,11 @@
    "Mag": 1.06,
    "AbsMag": -5.278031201,
    "Spectrum": "M1Ib + B2.5V",
-   "ColorIndex": 1.865
+   "ColorIndex": 1.865,
+   "imgUrl": ""
  },
  {
-   "StarID": 17425,
+   "id": 17425,
    "Hip": 24608,
    "HD": 34029,
    "HR": 1708,
@@ -48,10 +50,11 @@
    "Mag": 0.08,
    "AbsMag": -0.479383464,
    "Spectrum": "M1: comp    ",
-   "ColorIndex": 0.795
+   "ColorIndex": 0.795,
+   "imgUrl": ""
  },
  {
-   "StarID": 12345,
+   "id": 12345,
    "Hip": null,
    "HD": null,
    "HR": null,
@@ -65,10 +68,11 @@
    "Mag": 2.91,
    "AbsMag": null,
    "Spectrum": "",
-   "ColorIndex": null
+   "ColorIndex": null,
+   "imgUrl": ""
  },
  {
-   "StarID": 74084,
+   "id": 74084,
    "Hip": 102098,
    "HD": 197345,
    "HR": 7924,
@@ -82,10 +86,11 @@
    "Mag": 1.25,
    "AbsMag": -8.728393131,
    "Spectrum": "A2Ia        ",
-   "ColorIndex": 0.092
+   "ColorIndex": 0.092,
+   "imgUrl": ""
  },
  {
-   "StarID": 23456,
+   "id": 23456,
    "Hip": null,
    "HD": null,
    "HR": null,
@@ -99,10 +104,11 @@
    "Mag": 2.23,
    "AbsMag": null,
    "Spectrum": "",
-   "ColorIndex": null
+   "ColorIndex": null,
+   "imgUrl": ""
  },
  {
-   "StarID": 34567,
+   "id": 34567,
    "Hip": null,
    "HD": null,
    "HR": null,
@@ -116,10 +122,11 @@
    "Mag": 6.57,
    "AbsMag": null,
    "Spectrum": "",
-   "ColorIndex": null
+   "ColorIndex": null,
+   "imgUrl": ""
  },
  {
-   "StarID": 47710,
+   "id": 47710,
    "Hip": 65378,
    "HD": 116656,
    "HR": 5054,
@@ -133,10 +140,11 @@
    "Mag": 2.23,
    "AbsMag": 0.332241924,
    "Spectrum": "A2V         ",
-   "ColorIndex": 0.057
+   "ColorIndex": 0.057,
+   "imgUrl": ""
  },
  {
-   "StarID": 27698,
+   "id": 27698,
    "Hip": 37826,
    "HD": 62509,
    "HR": 2990,
@@ -150,10 +158,11 @@
    "Mag": 1.16,
    "AbsMag": 1.088030415,
    "Spectrum": "K0IIIvar    ",
-   "ColorIndex": 0.991
+   "ColorIndex": 0.991,
+   "imgUrl": ""
  },
  {
-   "StarID": 17301,
+   "id": 17301,
    "Hip": 24436,
    "HD": 34085,
    "HR": 1713,
@@ -167,10 +176,11 @@
    "Mag": 0.18,
    "AbsMag": -6.693437745,
    "Spectrum": "B8Ia        ",
-   "ColorIndex": -0.03
+   "ColorIndex": -0.03,
+   "imgUrl": ""
  },
  {
-   "StarID": 45678,
+   "id": 45678,
    "Hip": null,
    "HD": null,
    "HR": null,
@@ -184,10 +194,11 @@
    "Mag": 3.52,
    "AbsMag": null,
    "Spectrum": "",
-   "ColorIndex": null
+   "ColorIndex": null,
+   "imgUrl": ""
  },
  {
-   "StarID": 23440,
+   "id": 23440,
    "Hip": 32349,
    "HD": 48915,
    "HR": 2491,
@@ -201,10 +212,11 @@
    "Mag": -1.44,
    "AbsMag": 1.454398907,
    "Spectrum": "A0m...      ",
-   "ColorIndex": 0.009
+   "ColorIndex": 0.009,
+   "imgUrl": ""
  },
  {
-   "StarID": 56789,
+   "id": 56789,
    "Hip": null,
    "HD": null,
    "HR": null,
@@ -218,6 +230,7 @@
    "Mag": 4.8,
    "AbsMag": null,
    "Spectrum": "",
-   "ColorIndex": null
+   "ColorIndex": null,
+   "imgUrl": ""
  }
 ]
