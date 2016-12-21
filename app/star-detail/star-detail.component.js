@@ -14,13 +14,15 @@ angular.
 
         $http.get('stars/' + $routeParams.starId + '.json').then(function(response) {
           self.star = response.data;
-          
+
           // is this silly?
           self.star = appendLyDetail(self.star);
           self.star = truncateDecimalsDetail(self.star);
 
           self.star.lyUnit = true;
         });
+
+
 
         $scope.toggleDistanceUnit = function() {
           self.star.lyUnit = !self.star.lyUnit;

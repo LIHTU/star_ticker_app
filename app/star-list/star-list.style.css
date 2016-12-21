@@ -4,7 +4,7 @@
 
 .stars li {
   clear: both;
-  height: 80px;
+  height: auto;
   padding-top: 10px;
 }
 

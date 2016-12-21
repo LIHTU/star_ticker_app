@@ -13,7 +13,7 @@
 
   <h1>{{ $ctrl.star.ProperName}}</h1>
   <div class="row">
-    <div class ="col-md-5">
+    <div ng-if="$ctrl.star.imgUrl!==''" class ="col-md-5">
       <img ng-src="{{$ctrl.star.imgUrl}}" alt="{{$ctrl.star.name}}" />
     </div>
     <div class="col-md-7">
@@ -27,7 +27,7 @@
             <a ng-click="toggleDistanceUnit()">parsecs</a>
           </span>
         </p>
-        <p ng-show="displayingTngStars">Episodes: {{ $ctrl.star.Episode(s) }}</p>
+        <!--<p>Episodes: {{ $ctrl.star.Episodes }}</p>-->
       </div>
       <div class="data-box">
         <button class="btn btn-sm btn-default" ng-click="toggleRawData()">
