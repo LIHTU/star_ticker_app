@@ -11,6 +11,8 @@ angular.
       function StarDetailController($http, $routeParams, $scope) {
         var self = this;
         $scope.rawDataShow = false;
+        self.activeList = sessionStorage.activeList;
+        console.log(self.activeList);
 
         $http.get('stars/' + $routeParams.starId + '.json').then(function(response) {
           self.star = response.data;
@@ -21,8 +23,6 @@ angular.
 
           self.star.lyUnit = true;
         });
-
-
 
         $scope.toggleDistanceUnit = function() {
           self.star.lyUnit = !self.star.lyUnit;

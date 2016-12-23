@@ -4,10 +4,16 @@
 
 
 <div class="container">
-  <a href="#!/stars">
+  <a ng-show="$ctrl.activeList=='tenStars'" href="#!/stars">
     <button class="btn btn-sm btn-default">
       <i class="fa fa-arrow-circle-left "></i>
-      <span>All Stars</span>
+      <span>Ten Misc Stars</span>
+    </button>
+  </a>
+  <a ng-show="$ctrl.activeList=='tngStars'"href="#!/stars">
+    <button class="btn btn-sm btn-default">
+      <i class="fa fa-arrow-circle-left "></i>
+      <span>Tng Stars</span>
     </button>
   </a>
 

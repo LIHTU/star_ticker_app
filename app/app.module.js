@@ -2,6 +2,6 @@
 
 // Define the `starApp` module
 angular.module('starApp', [
-  // ...which depends on the `starList` module
+  // ...which depends these modules:
   'ngRoute', 'core', 'starList', 'starDetail'
 ]);

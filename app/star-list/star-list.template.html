@@ -5,6 +5,8 @@
 		<div class="col-md-2">
 			<!--Sidebar content-->
 
+			<p>{{$ctrl.testBox}}</p>
+
 			<p>
 				Search:
 				<input ng-model="$ctrl.query"/>
@@ -17,7 +19,7 @@
 					<label><input ng-click="showTenMisc()" type="radio" name="optradio" checked="checked">10 Random Bright Stars with Pics</label>
 				</div>
 				<div class="radio">
-					<label><input ng-click="showTNG()" type="radio" name="optradio">TNG</label>
+					<label><input ng-click="showTngStars()" type="radio" name="optradio">TNG</label>
 				</div>
 			</form>
 			<hr/>
@@ -36,11 +38,12 @@
 		<div class="col-md-10">
 			<!--Body content-->
 
+			<!-- Ten Stars List -->
 			<ul class="stars">
 				<li ng-show="displayingTenStars"
-				    ng-repeat="star in $ctrl.stars | filter:$ctrl.query | orderBy:$ctrl.orderProp"
+				    ng-repeat="star in $ctrl.tenStars | filter:$ctrl.query | orderBy:$ctrl.orderProp"
 				    class="thumbnail star-row">
-					<div ng-click="toggleDone(star)" class="thumb check-box">
+					<div ng-click="toggleDoneTen(star)" class="thumb check-box">
 						<i ng-show="!star.Done" class="fa fa-square-o"></i>
 						<i ng-show="star.Done" class="fa fa-check-square-o"></i>
 					</div>
@@ -58,15 +61,17 @@
 						<span ng-show="!star.lyUnit">Distance: {{ star.Distance }}
               <a ng-click="toggleDistanceUnit()" class="toggle-link">parsecs</a>
             </span>
+					<p>{{star.lyUnit}}</p>
 					</p>
 				</li>
 			</ul>
 
+			<!-- TNG Stars List -->
 			<ul class="stars">
 				<li ng-show="displayingTngStars"
-				    ng-repeat="star in $ctrl.stars | filter:$ctrl.query | orderBy:$ctrl.orderProp"
+				    ng-repeat="star in $ctrl.tngStars | filter:$ctrl.query | orderBy:$ctrl.orderProp"
 				    class="thumbnail star-row">
-					<div ng-click="toggleDone(star)" class="thumb check-box">
+					<div ng-click="toggleDoneTng(star)" class="thumb check-box">
 						<i ng-show="!star.Done" class="fa fa-square-o"></i>
 						<i ng-show="star.Done" class="fa fa-check-square-o"></i>
 					</div>
