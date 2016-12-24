@@ -16,10 +16,10 @@
 			<p>Select List:</p>
 			<form>
 				<div class="radio">
-					<label><input ng-click="showTenMisc()" type="radio" name="optradio" checked="checked">10 Random Bright Stars with Pics</label>
+					<label><input ng-click="showTenMisc()" id="tenRadio" type="radio" name="optradio">10 Random Bright Stars with Pics</label>
 				</div>
 				<div class="radio">
-					<label><input ng-click="showTngStars()" type="radio" name="optradio">TNG</label>
+					<label><input ng-click="showTngStars()" id="tngRadio" type="radio" name="optradio">TNG</label>
 				</div>
 			</form>
 			<hr/>
@@ -90,7 +90,7 @@
               <a ng-click="toggleDistanceUnit()" class="toggle-link">parsecs</a>
             </span>
 					</p>
-					<p>{{star.Episodes}}</p>
+					<p>TNG Episodes star was mentioned in: {{star.Episodes}}</p>
 				</li>
 			</ul>
 

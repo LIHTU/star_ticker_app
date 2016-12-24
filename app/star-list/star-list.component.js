@@ -10,7 +10,6 @@ component('starList', {
 
         $scope.errors = [];
         var self = this;
-        var starData;
         self.orderProp = 'Distance';
         $scope.displayingTenStars = true;
 
@@ -50,33 +49,6 @@ component('starList', {
           );
         }
 
-        // init
-        if (!sessionStorage.storedTenStars) {
-          // stars not stored
-          console.log('if trigged');
-          $scope.getTenMisc();
-          $scope.getTngStars();
-          self.stars = self.tenStars;
-          sessionStorage.activeList = 'tenStars';
-          self.activeList = sessionStorage.activeList;
-        } else {
-          // stars already stored.
-          console.log('else trigged')
-          self.tenStars = JSON.parse(sessionStorage.storedTenStars);
-          self.tngStars = JSON.parse(sessionStorage.storedTngStars);
-          self.activeList = sessionStorage.activeList;
-        }
-
-        if (sessionStorage.activeList == "tenStars"){
-          self.stars = self.tenStars;
-        } else if (sessionStorage.activeList == "tngStars"){
-          self.stars = self.tngStars;
-        }
-
-        //        $scope.getTngStars();
-//        self.stars = JSON.parse(sessionStorage.storedTenStars);  // load ten misc initially
-        // end init
-
         $scope.showTenMisc = function() {
           $scope.displayingTenStars = true;
           $scope.displayingTngStars = false;
@@ -92,6 +64,42 @@ component('starList', {
           sessionStorage.activeList = 'tngStars';
           self.activeList = 'tngStar';
         }
+
+        // init
+        if (!sessionStorage.storedTenStars) {
+          // stars not stored
+          console.log('if trigged');
+          $scope.getTenMisc();
+          $scope.getTngStars();
+          self.stars = self.tenStars;
+          document.getElementById("tenRadio").checked = "checked";
+          sessionStorage.activeList = 'tenStars';
+          self.activeList = sessionStorage.activeList;
+        } else {
+          // stars already stored.
+          console.log('else trigged')
+          self.tenStars = JSON.parse(sessionStorage.storedTenStars);
+          self.tngStars = JSON.parse(sessionStorage.storedTngStars);
+          self.activeList = sessionStorage.activeList;
+        }
+
+        if (sessionStorage.activeList == "tenStars"){
+          self.stars = self.tenStars;
+          $scope.showTenMisc();
+          document.getElementById("tenRadio").checked = "checked";
+
+        } else if (sessionStorage.activeList == "tngStars"){
+          self.stars = self.tngStars;
+          $scope.showTngStars();
+          document.getElementById("tngRadio").checked = "checked";
+        }
+
+
+        //        $scope.getTngStars();
+//        self.stars = JSON.parse(sessionStorage.storedTenStars);  // load ten misc initially
+        // end init
+
+
 
         $scope.toggleDoneTng = function(thisStar) {
           // update scope
