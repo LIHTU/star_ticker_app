@@ -1,102 +1,109 @@
 <link rel="stylesheet" href="star-list/star-list.style.css"/>
 
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-2">
-			<!--Sidebar content-->
+    <div class="row">
+        <div class="col-md-2">
+            <!--Sidebar content-->
 
-			<p>{{$ctrl.testBox}}</p>
+            <p>{{$ctrl.testBox}}</p>
 
-			<p>
-				Search:
-				<input ng-model="$ctrl.query"/>
-			</p>
-			<hr/>
+            <p>
+                Search:
+                <input ng-model="$ctrl.query"/>
+            </p>
+            <hr/>
 
-			<p>Select List:</p>
-			<form>
-				<div class="radio">
-					<label><input ng-click="showTenMisc()" id="tenRadio" type="radio" name="optradio">10 Random Bright Stars with Pics</label>
-				</div>
-				<div class="radio">
-					<label><input ng-click="showTngStars()" id="tngRadio" type="radio" name="optradio">TNG</label>
-				</div>
-			</form>
-			<hr/>
+            <p>Select List:</p>
+            <form>
+                <div class="radio">
+                    <label><input ng-click="showTenMisc()" id="tenRadio" type="radio" name="optradio">10 Random Bright
+                        Stars with Pics</label>
+                </div>
+                <div class="radio">
+                    <label><input ng-click="showTngStars()" id="tngRadio" type="radio" name="optradio">TNG</label>
+                </div>
+            </form>
+            <hr/>
 
-			<p>
-				Sort by:
-				<select ng-model="$ctrl.orderProp">
-					<option value="ProperName">Alphabetical</option>
-					<option value="Distance">Closest</option>
-					<option value="-Distance">Furthest</option>
-					<option value="Mag">Brightest</option>
-				</select>
-			</p>
+            <p>
+                Sort by:
+                <select ng-model="$ctrl.orderProp">
+                    <option value="ProperName">Alphabetical</option>
+                    <option value="Distance">Closest</option>
+                    <option value="-Distance">Furthest</option>
+                    <option value="Mag">Brightest</option>
+                </select>
+            </p>
 
-		</div>
-		<div class="col-md-10">
-			<!--Body content-->
+        </div>
+        <div class="col-md-10">
+            <!--Body content-->
 
-			<!-- Ten Stars List -->
-			<ul class="stars">
-				<li ng-show="displayingTenStars"
-				    ng-repeat="star in $ctrl.tenStars | filter:$ctrl.query | orderBy:$ctrl.orderProp"
-				    class="thumbnail star-row">
-					<div ng-click="toggleDoneTen(star)" class="thumb check-box">
-						<i ng-show="!star.Done" class="fa fa-square-o"></i>
-						<i ng-show="star.Done" class="fa fa-check-square-o"></i>
-					</div>
-					<a href="#!/stars/{{star.id}}" class="thumb-img">
-						<img ng-src="{{star.imgUrl}}" alt="{{star.name}}"/>
-					</a>
+            <!-- Ten Stars List -->
+            <ul class="stars">
+                <li ng-show="displayingTenStars"
+                    ng-repeat="star in $ctrl.tenStars | filter:$ctrl.query | orderBy:$ctrl.orderProp"
+                    class="thumbnail star-row">
+                    <div ng-click="toggleDoneTen(star)" class="thumb check-box">
+                        <i ng-show="!star.Done" class="fa fa-square-o"></i>
+                        <i ng-show="star.Done" class="fa fa-check-square-o"></i>
+                    </div>
+                    <a href="#!/stars/{{star.id}}" class="thumb-img">
+                        <img ng-src="{{star.imgUrl}}" alt="{{star.name}}"/>
+                    </a>
 
-					<p class="data-line"><a href="#!/stars/{{star.id}}">{{ star.ProperName }}</a></p>
+                    <p class="data-line"><a href="#!/stars/{{star.id}}">{{ star.ProperName }}</a></p>
 
-					<p class="data-line">Apparent Magnitude: {{ star.Mag }}</p>
-					<p class="data-line">
+                    <p class="data-line">Apparent Magnitude: {{ star.Mag }}</p>
+                    <p class="data-line">
             <span ng-show="star.lyUnit">Distance: {{ star.Distance_ly }}
               <a ng-click="toggleDistanceUnit()" class="toggle-link">light years</a>
             </span>
-						<span ng-show="!star.lyUnit">Distance: {{ star.Distance }}
+                        <span ng-show="!star.lyUnit">Distance: {{ star.Distance }}
               <a ng-click="toggleDistanceUnit()" class="toggle-link">parsecs</a>
             </span>
-					<p>{{star.lyUnit}}</p>
-					</p>
-				</li>
-			</ul>
+                    <p>{{star.lyUnit}}</p>
+                    </p>
+                </li>
+            </ul>
 
-			<!-- TNG Stars List -->
-			<ul class="stars">
-				<li ng-show="displayingTngStars"
-				    ng-repeat="star in $ctrl.tngStars | filter:$ctrl.query | orderBy:$ctrl.orderProp"
-				    class="thumbnail star-row">
-					<div ng-click="toggleDoneTng(star)" class="thumb check-box">
-						<i ng-show="!star.Done" class="fa fa-square-o"></i>
-						<i ng-show="star.Done" class="fa fa-check-square-o"></i>
-					</div>
-					<a href="#!/stars/{{star.id}}" class="thumb-img">
-						<img ng-src="{{star.imgUrl}}" alt="{{star.name}}"/>
-					</a>
+            <!-- TNG Stars List -->
+            <ul class="stars">
+                <div class="row">
+                    <li ng-show="displayingTngStars"
+                        ng-repeat="star in $ctrl.tngStars | filter:$ctrl.query | orderBy:$ctrl.orderProp"
+                        class="thumbnail star-row">
+                        <div ng-click="toggleDoneTng(star)" class="thumb check-box col-md-1">
+                            <i ng-show="!star.Done" class="fa fa-square-o"></i>
+                            <i ng-show="star.Done" class="fa fa-check-square-o"></i>
+                        </div>
+                        <a ng-show="star.imgUrl !== ''" href="#!/stars/{{star.id}}" class="thumb-img">
+                            <img ng-src="{{star.imgUrl}}" alt="{{star.name}}"/>
+                        </a>
+                        <a ng-show="star.imgUrl == ''" href="#!/stars/{{star.id}}" class="thumb-img">
+                            <img ng-src="img/stars/no-img.jpg" alt="{{star.name}}"/>
+                        </a>
 
-					<p class="data-line"><a href="#!/stars/{{star.id}}">{{ star.ProperName }}</a></p>
+                        <p class="data-line"><a href="#!/stars/{{star.id}}">{{ star.ProperName }}</a></p>
 
-					<p class="data-line">Apparent Magnitude: {{ star.Mag }}</p>
-					<p class="data-line">
-            <span ng-show="star.lyUnit">Distance: {{ star.Distance_ly }}
-              <a ng-click="toggleDistanceUnit()" class="toggle-link">light years</a>
-            </span>
-						<span ng-show="!star.lyUnit">Distance: {{ star.Distance }}
-              <a ng-click="toggleDistanceUnit()" class="toggle-link">parsecs</a>
-            </span>
-					</p>
-					<p>TNG Episodes star was mentioned in: {{star.Episodes}}</p>
-				</li>
-			</ul>
+                        <p class="data-line">Apparent Magnitude: {{ star.Mag }}</p>
+                        <p class="data-line">
+                            <span ng-show="star.lyUnit">Distance: {{ star.Distance_ly }}
+                              <a ng-click="toggleDistanceUnit()" class="toggle-link">light years</a>
+                            </span>
+                                            <span ng-show="!star.lyUnit">Distance: {{ star.Distance }}
+                              <a ng-click="toggleDistanceUnit()" class="toggle-link">parsecs</a>
+                            </span>
+                        </p>
+                        <p>TNG Episodes star was mentioned in: {{star.Episodes}}</p>
+                    </li>
+                </div>
 
-			<!-- Fun line that displays json with the pre tag, which means preformatted.  -->
-			<!-- <pre>{{ $ctrl.stars | filter:$ctrl.query | orderBy:$ctrl.orderProp | json }}</pre> -->
+            </ul>
 
-		</div>
-	</div>
+            <!-- Fun line that displays json with the pre tag, which means preformatted.  -->
+            <!-- <pre>{{ $ctrl.stars | filter:$ctrl.query | orderBy:$ctrl.orderProp | json }}</pre> -->
+
+        </div>
+    </div>
 </div>
